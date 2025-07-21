@@ -10,7 +10,6 @@ import dotenv from 'dotenv'
 import otpRouter from './routes/otpRouter.js'
 import allApis from './routes/allApis.js'
 import cors from 'cors';
-app.use(cors());
 
 
 dotenv.config()
@@ -20,10 +19,11 @@ dotenv.config()
 
 
 connectDb()
-
 const app = express()
 
+
 //middleware
+app.use(cors());
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(cookieParser())
