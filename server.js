@@ -9,10 +9,13 @@ import connectDb from './dbconnect/mongodb.js'
 import dotenv from 'dotenv'
 import otpRouter from './routes/otpRouter.js'
 import allApis from './routes/allApis.js'
-
-dotenv.config()
 import cors from 'cors';
 app.use(cors());
+
+
+dotenv.config()
+
+
 
 
 
